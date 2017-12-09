@@ -14,7 +14,7 @@ import RealmSwift
 class TrailQRCodeController: QRCodeViewController   {
     let webView = "WebViewController"
 
-    override func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+    override func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
@@ -34,7 +34,7 @@ class TrailQRCodeController: QRCodeViewController   {
             
             if metadataObj.stringValue != nil {
                 //messageLabel.text = metadataObj.stringValue
-                print("capture")
+                
                 //let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let scan = metadataObj.stringValue?.trimmingCharacters(in: .whitespacesAndNewlines)
                 let input = ("\(id)")
@@ -45,32 +45,35 @@ class TrailQRCodeController: QRCodeViewController   {
                     newViewController.request = URLRequest(url: url!)
                     navigationController?.pushViewController(newViewController, animated: true)
                 }else{
+                    print(input)
                     if let and = scan?.index(after: (scan?.index(of: "&")!)!){
-                        let check = scan?.suffix(from: and)
-                        if input == String(describing: check) {
-                            do {
-                                let targetData = try Realm().objects(Item.self).filter("id = %@" ,id)
-                                for i in targetData{
-                                    if i.id == id {
-                                        let realm = try! Realm()
-                                        try! realm.write {
-                                            i.isRevealedTrail = true
-                                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                            let newViewController = storyBoard.instantiateViewController(withIdentifier: "InformationViewController") as! InformationViewController
-                                            newViewController.originVC = .trailVC
-                                            newViewController.showItem = i
-                                            self.navigationController?.pushViewController(newViewController, animated: true)
+                        if let check = scan?.suffix(from: and){
+                            if input.elementsEqual(check) {
+                                do {
+                                    let targetData = try Realm().objects(Item.self).filter("id = %@" ,id)
+                                    for i in targetData{
+                                        if i.id == id {
+                                            let realm = try! Realm()
+                                            try! realm.write {
+                                                i.isRevealedTrail = true
+                                                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                                let newViewController = storyBoard.instantiateViewController(withIdentifier: "InformationViewController") as! InformationViewController
+                                                newViewController.originVC = .trailVC
+                                                newViewController.showItem = i
+                                                self.navigationController?.pushViewController(newViewController, animated: true)
+                                            }
                                         }
                                     }
+                                } catch let error as NSError{
+                                    createAlert(title: "ERROR", message: "Wrong Target")
+                                    
                                 }
-                            } catch let error as NSError{
+                            }else{
                                 createAlert(title: "ERROR", message: "Wrong Target")
-                                
+                                //self.navigationController?.popViewController(animated: true)
                             }
-                        }else{
-                            createAlert(title: "ERROR", message: "Wrong Target")
-                            //self.navigationController?.popViewController(animated: true)
                         }
+                        
                         
                     }
                     

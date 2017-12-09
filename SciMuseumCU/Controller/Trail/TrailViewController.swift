@@ -55,7 +55,6 @@ class TrailViewController: UIViewController,AVCaptureMetadataOutputObjectsDelega
         //
         //genData()
         
-            
         let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
 
             do {
@@ -84,21 +83,6 @@ class TrailViewController: UIViewController,AVCaptureMetadataOutputObjectsDelega
                 
                 // Start video capture.
                 captureSession?.startRunning()
-                
-                // Move the message label and top bar to the front
-                //view.bringSubview(toFront: messageLabel)
-                //            view.bringSubview(toFront: topbar)
-                
-                // Initialize QR Code Frame to highlight the QR code
-                //            qrCodeFrameView = UIView()
-                //
-                //            if let qrCodeFrameView = qrCodeFrameView {
-                //                qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
-                //                qrCodeFrameView.layer.borderWidth = 2
-                //                view.addSubview(qrCodeFrameView)
-                //                view.bringSubview(toFront: qrCodeFrameView)
-                //            }
-                
             } catch {
                 // If any error occurs, simply print it out and don't continue any more.
                 print(error)
@@ -148,15 +132,14 @@ class TrailViewController: UIViewController,AVCaptureMetadataOutputObjectsDelega
 extension TrailViewController{
     //MARK: - Capture
     
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         captureSession?.stopRunning()
         print("asdfsdafasdfsadfasdf\n\n")
         if let metadataObject = metadataObjects.first {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let scan = readableObject.stringValue?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
-            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             if scan[(scan.startIndex)] == "#"{
-                let and = scan.index(after: scan.index(of: "&")!)
+                let and = scan.index(after: scan.index(of: "#")!)
                 let check = scan.suffix(from: and)
                 fetch(trailID: String(describing: check))
             }
@@ -166,44 +149,9 @@ extension TrailViewController{
             }
         }
         
-        dismiss(animated: true)
     }
     
-//    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
-//
-//        // Check if the metadataObjects array is not nil and it contains at least one object.
-//        if metadataObjects == nil || metadataObjects.count == 0 {
-//            qrCodeFrameView?.frame = CGRect.zero
-//            // messageLabel.text = "No QR/barcode is detected"
-//            return
-//        }
-//
-//        // Get the metadata object.
-//        let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
-//
-//        if supportedCodeTypes.contains(metadataObj.type) {
-//            // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
-//            let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
-//            qrCodeFrameView?.frame = barCodeObject!.bounds
-//
-//            if metadataObj.stringValue != nil {
-//                //messageLabel.text = metadataObj.stringValue
-//                captureSession?.stopRunning()
-//                let scan = metadataObj.stringValue?.trimmingCharacters(in:     .whitespacesAndNewlines)
-//                if scan![(scan?.startIndex)!] == "#"{
-//                    let and = scan?.index(after: (scan?.index(of: "#")!)!)
-//                    let check = scan?.suffix(from: and!)
-//                    fetch(trailID: String(describing: check))
-//                }
-//
-//                else{
-//                    createAlert(title: "ERROR", message: "Wrong Target")
-//                }
-//
-//            }
-//        }
-//    }
-    
+
     //MARK: - Fetch and Store
     
     func store(query :QrCodeQuery.Data.Trail!)  {

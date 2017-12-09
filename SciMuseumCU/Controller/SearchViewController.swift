@@ -25,7 +25,7 @@ class SearchViewController: QRCodeViewController  {
     
     // MARK: - AVCaptureMetadataOutputObjectsDelegate Methods
     
-    override func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+    override func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
@@ -46,6 +46,8 @@ class SearchViewController: QRCodeViewController  {
             if metadataObj.stringValue != nil {
                 
                 let scan = metadataObj.stringValue?.trimmingCharacters(in: .whitespacesAndNewlines)
+                print(verifyUrl(urlString: scan))
+
                 if verifyUrl(urlString: scan){
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let newViewController = storyBoard.instantiateViewController(withIdentifier: webView) as! WebViewController
@@ -81,6 +83,7 @@ class SearchViewController: QRCodeViewController  {
     func verifyUrl (urlString: String?) -> Bool {
         if let urlString = urlString {
             if let url  = NSURL(string: urlString) {
+                print("check")
                 return UIApplication.shared.canOpenURL(url as URL)
             }
         }

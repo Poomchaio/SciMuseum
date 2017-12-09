@@ -84,7 +84,7 @@ extension CollectionViewController: UITableViewDelegate,UITableViewDataSource{
             cell?.label.text = self.collectionName[indexPath.row]
             cell?.progressBarLabel.text! = "\(data!.currentProgress)/\(data!.totalProgress)"
             cell?.progressBar.progressValue = CGFloat(Float(data!.currentProgress)/Float(data!.totalProgress))*100
-            cell?.img.image = UIImage(named: self.collectionID[indexPath.item])
+            cell?.img.image = #imageLiteral(resourceName: "found")
             
             return cell!
         }

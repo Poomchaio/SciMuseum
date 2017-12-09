@@ -87,6 +87,7 @@ extension StampViewController: UICollectionViewDelegateFlowLayout,UICollectionVi
             cell.title.text = collectionTitle
             cell.progressLabel.text = "\(revealed)/\(total)"
             cell.layer.cornerRadius = 5
+            cell.img.image = #imageLiteral(resourceName: "found")
             //cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
             cell.progressBar.progressValue = CGFloat(progressValue)
             cell.isUserInteractionEnabled = false
@@ -94,10 +95,11 @@ extension StampViewController: UICollectionViewDelegateFlowLayout,UICollectionVi
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: stampReuseIdentifier, for: indexPath as IndexPath) as?StampCollectionViewCell
         if stamp[indexPath.row].isRevealedCollection == true {
-            cell?.img.image = UIImage(named: "Turtle")
+            cell?.img.image = #imageLiteral(resourceName: "found")
 
         }else{
-            cell?.img.image = UIImage(named: "Turtle (blank)")
+            cell?.img.image = #imageLiteral(resourceName: "notfound")
+            
         }
         
         cell?.layer.cornerRadius = 5

@@ -23,7 +23,6 @@
 		9E19EE4F1FDBDAF6000C1AE4 /* TrailTitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19EE491FDBDAF6000C1AE4 /* TrailTitleViewCell.swift */; };
 		9E4A95DA1FDBCFED00FBE53C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A95D91FDBCFED00FBE53C /* AppDelegate.swift */; };
 		9E4A95DC1FDBCFED00FBE53C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A95DB1FDBCFED00FBE53C /* ViewController.swift */; };
-		9E4A95E21FDBCFED00FBE53C /* SciMuseumCU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A95E01FDBCFED00FBE53C /* SciMuseumCU.xcdatamodeld */; };
 		9E4A95E41FDBCFED00FBE53C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E4A95E31FDBCFED00FBE53C /* Assets.xcassets */; };
 		9E4A95E71FDBCFED00FBE53C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4A95E51FDBCFED00FBE53C /* LaunchScreen.storyboard */; };
 		9E4A95F21FDBCFED00FBE53C /* SciMuseumCUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A95F11FDBCFED00FBE53C /* SciMuseumCUTests.swift */; };
@@ -98,7 +97,6 @@
 		9E4A95D61FDBCFED00FBE53C /* SciMuseumCU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciMuseumCU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4A95D91FDBCFED00FBE53C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E4A95DB1FDBCFED00FBE53C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9E4A95E11FDBCFED00FBE53C /* SciMuseumCU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SciMuseumCU.xcdatamodel; sourceTree = "<group>"; };
 		9E4A95E31FDBCFED00FBE53C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E4A95E61FDBCFED00FBE53C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E4A95E81FDBCFED00FBE53C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 		9E4A97001FDBD73600FBE53C /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		9E4A97011FDBD73600FBE53C /* CollectionTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionTableCell.xib; sourceTree = "<group>"; };
 		9E4A970D1FDBD75400FBE53C /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
-		9E4A970F1FDBD78B00FBE53C /* SciMuseumCU-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SciMuseumCU-Bridging-Header.h"; sourceTree = "<group>"; };
 		9E4A97101FDBD78C00FBE53C /* TitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		9E4A97111FDBD78C00FBE53C /* InformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
 		9E4A97121FDBD78D00FBE53C /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
@@ -263,8 +260,6 @@
 				9E4A960B1FDBD1C700FBE53C /* Model */,
 				9E4A95E51FDBCFED00FBE53C /* LaunchScreen.storyboard */,
 				9E4A95E81FDBCFED00FBE53C /* Info.plist */,
-				9E4A95E01FDBCFED00FBE53C /* SciMuseumCU.xcdatamodeld */,
-				9E4A970F1FDBD78B00FBE53C /* SciMuseumCU-Bridging-Header.h */,
 			);
 			path = SciMuseumCU;
 			sourceTree = "<group>";
@@ -705,7 +700,6 @@
 				9E4A96231FDBD30A00FBE53C /* FirstViewController.swift in Sources */,
 				9E19EE3F1FDBDADF000C1AE4 /* TrailStampViewController.swift in Sources */,
 				9E19EE371FDBDAC7000C1AE4 /* SearchViewController.swift in Sources */,
-				9E4A95E21FDBCFED00FBE53C /* SciMuseumCU.xcdatamodeld in Sources */,
 				9E4A971A1FDBD78D00FBE53C /* TitleTableViewCell.swift in Sources */,
 				9E19EE421FDBDADF000C1AE4 /* IntroductionViewController.swift in Sources */,
 				9E4A970B1FDBD73600FBE53C /* CollectionCell.swift in Sources */,
@@ -1018,19 +1012,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		9E4A95E01FDBCFED00FBE53C /* SciMuseumCU.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				9E4A95E11FDBCFED00FBE53C /* SciMuseumCU.xcdatamodel */,
-			);
-			currentVersion = 9E4A95E11FDBCFED00FBE53C /* SciMuseumCU.xcdatamodel */;
-			path = SciMuseumCU.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 9E4A95CE1FDBCFED00FBE53C /* Project object */;
 }

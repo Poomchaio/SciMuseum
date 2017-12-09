@@ -118,7 +118,7 @@ extension InformationViewController: UITableViewDelegate,UITableViewDataSource{
                     break
                 }
             case .trailVC:
-                break
+                
                 if vc is TrailStampViewController {
                     _ = self.navigationController?.popToViewController(vc, animated: true)
                     break
