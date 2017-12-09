@@ -34,7 +34,7 @@ class InformationViewController: UIViewController {
         informationTable.rowHeight = UITableViewAutomaticDimension
         informationTable.register(UINib(nibName: informationCell, bundle: nil), forCellReuseIdentifier: informationCell)
         informationTable.register(UINib(nibName: titleCell, bundle: nil), forCellReuseIdentifier: titleCell)
-
+        self.navigationItem.title = showItem.nameTH
         // Do any additional setup after loading the view.
     }
 
@@ -43,7 +43,7 @@ class InformationViewController: UIViewController {
 
 extension InformationViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return showItem.figures.count + 1
+        return showItem.figures.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,13 +74,27 @@ extension InformationViewController: UITableViewDelegate,UITableViewDataSource{
                 str += "\t\(showItem.informations[i].text)\n"
             }
             cell?.information.text = str//.trimmingCharacters(in: .whitespacesAndNewlines)
-
+            if let url = URL(string: "\(showItem.figures[row].image)") {
+                //cell?.img.sd_setImage(with: url)
+                
+                
+                cell?.img.sd_setImage(with: url, completed: {
+                    (image, error, cacheType, url) in
+                    // do your custom logic here
+                    
+                    if image == nil{
+                        cell?.img.image = #imageLiteral(resourceName: "image-not-found-4a963b95bf081c3ea02923dceaeb3f8085e1a654fc54840aac61a57a60903fef")
+                    }
+                    
+                })
+                
+            }
             return cell!
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: informationCell, for: indexPath) as? InformationTableViewCell
             cell?.activityIndicator.startAnimating()
             cell?.activityIndicator.isHidden = false
-        if let url = URL(string: "\(showItem.figures[row-1].image)") {
+        if let url = URL(string: "\(showItem.figures[row].image)") {
             //cell?.img.sd_setImage(with: url)
 
            
@@ -90,19 +104,16 @@ extension InformationViewController: UITableViewDelegate,UITableViewDataSource{
                 cell?.activityIndicator.stopAnimating()
                 cell?.activityIndicator.isHidden = true
                 if image == nil{
-                    cell?.img.sd_setImage(with: URL(string:"https://renderman.pixar.com/assets/camaleon_cms/image-not-found-4a963b95bf081c3ea02923dceaeb3f8085e1a654fc54840aac61a57a60903fef.png"))
+                    cell?.img.image = #imageLiteral(resourceName: "image-not-found-4a963b95bf081c3ea02923dceaeb3f8085e1a654fc54840aac61a57a60903fef")
                 }
                 
             })
 
-            
-            
-            //cell?.img.sd_setImage(with: url)
         }
         
-        cell?.content.text = "\t\(showItem.figures[row-1].figureDescription)"
+        cell?.content.text = "\t\(showItem.figures[row].figureDescription)"
         
-        cell?.reference.text = showItem.figures[row-1].reference
+        cell?.reference.text = showItem.figures[row].reference
        
         
         return cell!

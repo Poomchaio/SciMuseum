@@ -56,6 +56,7 @@ class CollectionQRCodeController: QRCodeViewController   {
                                     total[0].currentProgress+=1
                                     newViewController.showItem = j
                                     newViewController.originVC = .collectionVC
+                                    newViewController.navigationController?.title = j.nameTH
                                     self.navigationController?.pushViewController(newViewController, animated: true)
                                 }
                             }
