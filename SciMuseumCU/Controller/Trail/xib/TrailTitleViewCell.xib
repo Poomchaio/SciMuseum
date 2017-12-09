@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TrailTitleViewCell" reuseIdentifier="TrailTitleViewCell" id="gTV-IL-0wX" customClass="TrailTitleViewCell" customModule="Bio_Museum" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="253" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="253" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49o-Wx-8T6">
+                        <rect key="frame" x="0.0" y="0.0" width="253" height="100"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVa-3o-2i1">
+                        <rect key="frame" x="8" y="8" width="245" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="kBF-Eg-Kgm"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="HelveticaNeue-Light"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacingBefore="10" firstLineHeadIndent="10" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="highlightedColor" red="0.98823529409999999" green="0.8980392157" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="41I-y1-XFc">
+                        <rect key="frame" x="8" y="28" width="237" height="64"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="HelveticaNeue-Light"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="0.11742922079004714" blue="0.13615487240269852" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zVa-3o-2i1" secondAttribute="trailing" id="2oS-xz-ASC"/>
+                <constraint firstItem="49o-Wx-8T6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6ph-kQ-I2G"/>
+                <constraint firstAttribute="bottom" secondItem="41I-y1-XFc" secondAttribute="bottom" constant="8" id="7DB-lU-DQJ"/>
+                <constraint firstItem="zVa-3o-2i1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="EeJ-sn-cP4"/>
+                <constraint firstItem="41I-y1-XFc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="J9k-bb-6Wy"/>
+                <constraint firstItem="zVa-3o-2i1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="S54-e7-zlf"/>
+                <constraint firstAttribute="trailing" secondItem="41I-y1-XFc" secondAttribute="trailing" constant="8" id="X4b-5X-ZEY"/>
+                <constraint firstItem="41I-y1-XFc" firstAttribute="top" secondItem="zVa-3o-2i1" secondAttribute="bottom" id="a3H-70-Rdw"/>
+                <constraint firstItem="49o-Wx-8T6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bMD-F7-8dZ"/>
+                <constraint firstAttribute="trailing" secondItem="49o-Wx-8T6" secondAttribute="trailing" id="eGU-zB-cUy"/>
+                <constraint firstAttribute="bottom" secondItem="49o-Wx-8T6" secondAttribute="bottom" id="gKU-Bd-8B5"/>
+            </constraints>
+            <size key="customSize" width="253" height="107"/>
+            <connections>
+                <outlet property="questDescription" destination="41I-y1-XFc" id="Xak-JU-EYW"/>
+                <outlet property="title" destination="zVa-3o-2i1" id="eHR-fA-hBb"/>
+            </connections>
+            <point key="canvasLocation" x="153.5" y="94"/>
+        </collectionViewCell>
+    </objects>
+</document>

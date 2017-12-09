@@ -1,0 +1,64 @@
+query Query {
+collections {
+id
+name
+items {
+id
+name {
+en
+th
+}
+scientificName
+information
+figures {
+image
+description
+reference
+}
+room {
+name
+}
+}
+}
+}
+
+
+query QrCode($id: ID!)  {
+    trail(id: $id) {
+name
+id
+quests {
+name
+introduction
+summary
+objectives {
+name
+targets {
+hint
+introduction
+summary
+item {
+id
+name {
+en
+th
+}
+scientificName
+information
+figures {
+image
+description
+reference
+}
+room {
+name
+}
+}
+
+}
+}
+}
+    }
+}
+
+
