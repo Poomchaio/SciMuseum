@@ -16,7 +16,7 @@ class MuseumMapViewController: UIViewController {
         
         let img = UIImageView()
         img.image = #imageLiteral(resourceName: "map_Museum-1")
-        img.frame = CGRect(x: 0, y: 0, width: scrollView.frame.height*1.42, height: UIScreen.main.bounds.height)
+        img.frame = CGRect(x: 0, y: 0, width: scrollView.frame.height*1.42, height: UIScreen.main.bounds.height-(tabBarController?.tabBar.frame.height)!-(navigationController?.navigationBar.frame.height)!-UIApplication.shared.statusBarFrame.height)
         scrollView.contentSize.width = scrollView.frame.height*1.42
         
         scrollView.addSubview(img)

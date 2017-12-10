@@ -14,7 +14,7 @@ class FirstViewController: UIViewController,WKUIDelegate,UIGestureRecognizerDele
     
     
     
-    var carousel = [#imageLiteral(resourceName: "specialexhibition"),#imageLiteral(resourceName: "mapfront"),#imageLiteral(resourceName: "ourMuseum"),#imageLiteral(resourceName: "genInfo"),#imageLiteral(resourceName: "NewsFeed")]
+    var carousel = [#imageLiteral(resourceName: "specialexhibition"),#imageLiteral(resourceName: "mapfront"),#imageLiteral(resourceName: "ourMuseum"),#imageLiteral(resourceName: "genInfo")]
     let carouselViewCell = "CarouselViewCell"
     let webView = "WebViewController"
     var load = [Bool]()
@@ -97,11 +97,15 @@ class FirstViewController: UIViewController,WKUIDelegate,UIGestureRecognizerDele
                     //do what you want to cell here
                     
                     switch tapIndexPath.row{
-                    case 0: break
-                    case 1: let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "MuseumMapViewController") as! MuseumMapViewController
-                    
-                    navigationController?.pushViewController(newViewController, animated: true)
+                    case 0:
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "SpecialExhibitionViewController") as! SpecialExhibitionViewController
+                        
+                        navigationController?.pushViewController(newViewController, animated: true)
+                    case 1:
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "MuseumMapViewController") as! MuseumMapViewController
+                        navigationController?.pushViewController(newViewController, animated: true)
                     default:
                         break
                     }
