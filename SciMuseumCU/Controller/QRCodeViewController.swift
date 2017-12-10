@@ -66,7 +66,6 @@ class QRCodeViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
             
         } catch {
             let collectionData = try! Realm().objects(Item.self).filter("id = %@" ,id)
-            print(collectionData)
             for i in collectionData{
                 if i.id == id{
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

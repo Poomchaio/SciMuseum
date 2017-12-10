@@ -32,9 +32,9 @@ class Item: Object{
     @objc dynamic var roomName:String = ""
     let informations = List<StringObject>()
     let figures = List<Figure>()
-    override static func primaryKey() -> String? {
-        return "id"
-    }
+//    override static func primaryKey() -> String? {
+//        return "id"
+//    }
 }
 
 class Figure: Object {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4632B132CD993924EF8D3D73 /* Pods_SciMuseumCUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FC529244746D1591B9F90E /* Pods_SciMuseumCUUITests.framework */; };
 		76B566885E3B48A2FA5ED2D3 /* Pods_SciMuseumCU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83405898C267E0901FE679B5 /* Pods_SciMuseumCU.framework */; };
+		9E14AEC51FDD5D64006A3DA4 /* GeneralInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E14AEC41FDD5D64006A3DA4 /* GeneralInfoViewController.swift */; };
 		9E19EE371FDBDAC7000C1AE4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19EE361FDBDAC7000C1AE4 /* SearchViewController.swift */; };
 		9E19EE3E1FDBDADF000C1AE4 /* TrailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19EE391FDBDADF000C1AE4 /* TrailViewController.swift */; };
 		9E19EE3F1FDBDADF000C1AE4 /* TrailStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19EE3A1FDBDADF000C1AE4 /* TrailStampViewController.swift */; };
@@ -88,6 +89,7 @@
 		671429C020EFCCB416125E3E /* Pods_SciMuseumCUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SciMuseumCUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83405898C267E0901FE679B5 /* Pods_SciMuseumCU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SciMuseumCU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3FEB888B0E0417D6176AB7 /* Pods-SciMuseumCU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SciMuseumCU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SciMuseumCU/Pods-SciMuseumCU.debug.xcconfig"; sourceTree = "<group>"; };
+		9E14AEC41FDD5D64006A3DA4 /* GeneralInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoViewController.swift; sourceTree = "<group>"; };
 		9E19EE361FDBDAC7000C1AE4 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9E19EE391FDBDADF000C1AE4 /* TrailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailViewController.swift; sourceTree = "<group>"; };
 		9E19EE3A1FDBDADF000C1AE4 /* TrailStampViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailStampViewController.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			children = (
 				9E4A95D91FDBCFED00FBE53C /* AppDelegate.swift */,
 				9E5ED7B61FDBD86300332373 /* Main.storyboard */,
+				9E14AEC41FDD5D64006A3DA4 /* GeneralInfoViewController.swift */,
 				9E4A95E31FDBCFED00FBE53C /* Assets.xcassets */,
 				9E4A961A1FDBD2E800FBE53C /* Controller */,
 				9E4A960B1FDBD1C700FBE53C /* Model */,
@@ -765,6 +768,7 @@
 				9E4A971A1FDBD78D00FBE53C /* TitleTableViewCell.swift in Sources */,
 				9E19EE421FDBDADF000C1AE4 /* IntroductionViewController.swift in Sources */,
 				9E4A970B1FDBD73600FBE53C /* CollectionCell.swift in Sources */,
+				9E14AEC51FDD5D64006A3DA4 /* GeneralInfoViewController.swift in Sources */,
 				9E418AD61FDCF1800083A41A /* MuseumMapViewController.swift in Sources */,
 				9E4A96221FDBD30A00FBE53C /* WebViewController.swift in Sources */,
 				9E4A97041FDBD73600FBE53C /* TotalTableViewCell.swift in Sources */,

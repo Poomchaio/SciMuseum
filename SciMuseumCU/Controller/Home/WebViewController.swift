@@ -21,7 +21,6 @@ class WebViewController: UIViewController, WKUIDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(request)
         webView.load(request)        
         // Do any additional setup after loading the view.
     }

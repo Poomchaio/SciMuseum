@@ -174,6 +174,7 @@ extension StampViewController: UICollectionViewDelegateFlowLayout,UICollectionVi
             newViewController.collection = collectionName
             newViewController.id = stamp[indexPath.row].id
             newViewController.item = stamp[indexPath.row].id
+            newViewController.navigationItem.title = stamp[indexPath.row].nameTH
             navigationController?.pushViewController(newViewController, animated: true)
         }else{
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

@@ -41,7 +41,7 @@ class TrailQRCodeController: QRCodeViewController   {
                     newViewController.request = URLRequest(url: url!)
                     navigationController?.pushViewController(newViewController, animated: true)
                 }else{
-                    print(input)
+                    
                     if let and = scan?.index(after: (scan?.index(of: "&")!)!){
                         if let check = scan?.suffix(from: and){
                             if input.elementsEqual(check) {

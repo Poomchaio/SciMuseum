@@ -47,13 +47,11 @@ class FirstViewController: UIViewController,WKUIDelegate,UIGestureRecognizerDele
         for _ in carousel {
             load.append(false)
         }
-           print(Realm.Configuration.defaultConfiguration.fileURL!)
         tableView.delegate = self
         tableView.dataSource = self
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FirstViewController.tapCarousel(recognizer:)))
         tableView.addGestureRecognizer(tapGesture)
         tapGesture.delegate = self
-        print(Realm.Configuration.defaultConfiguration.fileURL)
         //firstWebView.load(request)
         do {
             let data = try Realm().objects(Collection.self)
@@ -111,6 +109,10 @@ class FirstViewController: UIViewController,WKUIDelegate,UIGestureRecognizerDele
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "OurMuseumViewController") as! OurMuseumTableViewController
                         navigationController?.pushViewController(newViewController, animated: true)
+                    case 3:
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "GeneralInfoViewController") as! GeneralInfoViewController
+                    navigationController?.pushViewController(newViewController, animated: true)
                     default:
                         break
                     }

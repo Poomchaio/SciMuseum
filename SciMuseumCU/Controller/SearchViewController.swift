@@ -39,7 +39,6 @@ class SearchViewController: QRCodeViewController  {
             if metadataObj.stringValue != nil {
                 
                 let scan = metadataObj.stringValue?.trimmingCharacters(in: .whitespacesAndNewlines)
-                print(verifyUrl(urlString: scan))
 
                 if verifyUrl(urlString: scan){
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -76,7 +75,6 @@ class SearchViewController: QRCodeViewController  {
     func verifyUrl (urlString: String?) -> Bool {
         if let urlString = urlString {
             if let url  = NSURL(string: urlString) {
-                print("check")
                 return UIApplication.shared.canOpenURL(url as URL)
             }
         }

@@ -31,7 +31,6 @@ class CollectionQRCodeController: QRCodeViewController   {
                 //let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let check = metadataObj.stringValue?.trimmingCharacters(in: .whitespacesAndNewlines)
                 let input = ("\(collection)&\(item)")
-                print(input)
                 
                 if  input == check{
                     let stampData = try! Realm().objects(Collection.self).filter("id = %@" ,collection)

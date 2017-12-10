@@ -134,7 +134,6 @@ extension TrailViewController{
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         captureSession?.stopRunning()
-        print("asdfsdafasdfsadfasdf\n\n")
         if let metadataObject = metadataObjects.first {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let scan = readableObject.stringValue?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
@@ -170,7 +169,6 @@ extension TrailViewController{
                         let targetObj = Target()
                         let item = try! Realm().objects(Item.self).filter("id = %@" ,target.item.id)
                         if item.count == 0 {
-                            print("nil\n")
                             let targetObj = Target()
                             targetObj.introduction = target.introduction!
                             targetObj.summary = target.summary!
@@ -230,9 +228,6 @@ extension TrailViewController{
                 print(#function, "ERROR | Could not retrieve trainer")
                 self.createAlert(title: "ERROR", message: "Could not retrieve trainer")
                 return
-                
-            }
-            if data.trail == nil{
                 
             }
             self.temp = data.trail

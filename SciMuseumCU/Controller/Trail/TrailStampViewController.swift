@@ -25,7 +25,8 @@ class TrailStampViewController: UIViewController, UICollectionViewDelegate, UICo
         trailCollectionVC.register(UINib(nibName: trailReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: trailReuseIdentifier)
         trailCollectionVC.register(UINib(nibName: "TrailTitleViewCell", bundle: nil), forCellWithReuseIdentifier: "TrailTitleViewCell")
         trailCollectionVC.register(UINib(nibName: headerIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier)
-        print(target)
+        self.navigationController?.navigationItem.title = questName
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,9 +88,8 @@ class TrailStampViewController: UIViewController, UICollectionViewDelegate, UICo
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "IntroductionViewController") as! IntroductionViewController
             newViewController.navigationItem.title = target[indexPath.section-1][indexPath.row].item?.id
-            //newViewController.intro.text = "asdfsdfas"
             newViewController.targetIntroduction = target[indexPath.section-1][indexPath.row].introduction
-            print(target[indexPath.section-1][indexPath.row].introduction)
+            newViewController.name = (target[indexPath.section-1][indexPath.row].item?.nameTH)!
             newViewController.id = (target[indexPath.section-1][indexPath.row].item?.id)!
             navigationController?.pushViewController(newViewController, animated: true)
         }else{

@@ -75,17 +75,15 @@ extension InformationViewController: UITableViewDelegate,UITableViewDataSource{
             }
             cell?.information.text = str//.trimmingCharacters(in: .whitespacesAndNewlines)
             if let url = URL(string: "\(showItem.figures[row].image)") {
-                //cell?.img.sd_setImage(with: url)
-                
-                
+                cell?.img.sd_setImage(with: url)                
                 cell?.img.sd_setImage(with: url, completed: {
                     (image, error, cacheType, url) in
                     // do your custom logic here
-                    
+
                     if image == nil{
                         cell?.img.image = #imageLiteral(resourceName: "image-not-found-4a963b95bf081c3ea02923dceaeb3f8085e1a654fc54840aac61a57a60903fef")
                     }
-                    
+
                 })
                 
             }

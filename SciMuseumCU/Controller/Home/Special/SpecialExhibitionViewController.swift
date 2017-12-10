@@ -29,4 +29,12 @@ class SpecialExhibitionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func goToPage(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        let url = URL(string: "https:www.museumsiam.org/")
+        newViewController.request = URLRequest(url: url!)
+        navigationController?.pushViewController(newViewController, animated: true)
+    }
+    
 }

@@ -13,6 +13,7 @@ class IntroductionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         intro.text = targetIntroduction
+        self.navigationItem.title = name
         // Do any additional setup after loading the view.
     }
 
@@ -25,10 +26,11 @@ class IntroductionViewController: UIViewController {
     @IBOutlet weak var intro: UILabel!
     var targetIntroduction = ""
     var id = ""
+    var name = ""
     @IBAction func nextPage(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "TrailQRCodeController") as! TrailQRCodeController
-        newViewController.navigationItem.title = id
+        newViewController.navigationItem.title = name
         newViewController.id = id
         self.navigationController?.pushViewController(newViewController, animated: true)
     }
