@@ -23,6 +23,7 @@ class OurMuseumTableViewController: UIViewController, UITableViewDelegate,UITabl
             let cell = tableView.dequeueReusableCell(withIdentifier: cellTitle, for: indexPath)  as! TitleOurMuseumTableViewCell
             cell.img.image = pic[indexPath.section]
             cell.information.text = information[indexPath.section]
+            cell.isUserInteractionEnabled = false
             return cell
             
         }
@@ -30,6 +31,7 @@ class OurMuseumTableViewController: UIViewController, UITableViewDelegate,UITabl
         cell.header.text = name[indexPath.section]
         cell.img.image = pic[indexPath.section]
         cell.information.text = information[indexPath.section]
+        cell.isUserInteractionEnabled = false
         return cell
     }
 
