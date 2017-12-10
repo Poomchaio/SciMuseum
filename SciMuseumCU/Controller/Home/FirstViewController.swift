@@ -106,6 +106,11 @@ class FirstViewController: UIViewController,WKUIDelegate,UIGestureRecognizerDele
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "MuseumMapViewController") as! MuseumMapViewController
                         navigationController?.pushViewController(newViewController, animated: true)
+                    
+                    case 2:
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "OurMuseumViewController") as! OurMuseumTableViewController
+                        navigationController?.pushViewController(newViewController, animated: true)
                     default:
                         break
                     }
@@ -211,24 +216,17 @@ extension FirstViewController  {
         return 1 //fix value
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return carousel.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: carouselViewCell, for: indexPath)  as! CarouselViewCell
-        //cell?.background.layer.cornerRadius = 10
         if load[indexPath.row] == false{
             cell.carousel.auk.show(image: carousel[indexPath.row])
             load[indexPath.row] = true
         }
 
-        //cell.carousel.auk.show(url: "https://bit.ly/auk_image")
-        //cell.carousel.auk.show(url: "https://bit.ly/moa_image")
-
         return cell
-
-        // Configure the cell...
 
     }
 

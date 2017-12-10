@@ -23,6 +23,11 @@
 		9E19EE4F1FDBDAF6000C1AE4 /* TrailTitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19EE491FDBDAF6000C1AE4 /* TrailTitleViewCell.swift */; };
 		9E418AD41FDCE9FA0083A41A /* SpecialExhibitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E418AD31FDCE9FA0083A41A /* SpecialExhibitionViewController.swift */; };
 		9E418AD61FDCF1800083A41A /* MuseumMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E418AD51FDCF1800083A41A /* MuseumMapViewController.swift */; };
+		9E450CE51FDD074400B3A39A /* OurMuseumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E450CE41FDD074400B3A39A /* OurMuseumTableViewController.swift */; };
+		9E450CEA1FDD0C9C00B3A39A /* OurMuseumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E450CE81FDD0C9C00B3A39A /* OurMuseumTableViewCell.swift */; };
+		9E450CEB1FDD0C9C00B3A39A /* OurMuseumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E450CE91FDD0C9C00B3A39A /* OurMuseumTableViewCell.xib */; };
+		9E450CF21FDD13A400B3A39A /* TitleOurMuseumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E450CF01FDD13A400B3A39A /* TitleOurMuseumTableViewCell.swift */; };
+		9E450CF31FDD13A400B3A39A /* TitleOurMuseumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E450CF11FDD13A400B3A39A /* TitleOurMuseumTableViewCell.xib */; };
 		9E4A95DA1FDBCFED00FBE53C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A95D91FDBCFED00FBE53C /* AppDelegate.swift */; };
 		9E4A95E41FDBCFED00FBE53C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E4A95E31FDBCFED00FBE53C /* Assets.xcassets */; };
 		9E4A95E71FDBCFED00FBE53C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4A95E51FDBCFED00FBE53C /* LaunchScreen.storyboard */; };
@@ -97,6 +102,11 @@
 		9E19EE491FDBDAF6000C1AE4 /* TrailTitleViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailTitleViewCell.swift; sourceTree = "<group>"; };
 		9E418AD31FDCE9FA0083A41A /* SpecialExhibitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialExhibitionViewController.swift; sourceTree = "<group>"; };
 		9E418AD51FDCF1800083A41A /* MuseumMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumMapViewController.swift; sourceTree = "<group>"; };
+		9E450CE41FDD074400B3A39A /* OurMuseumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurMuseumTableViewController.swift; sourceTree = "<group>"; };
+		9E450CE81FDD0C9C00B3A39A /* OurMuseumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurMuseumTableViewCell.swift; sourceTree = "<group>"; };
+		9E450CE91FDD0C9C00B3A39A /* OurMuseumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OurMuseumTableViewCell.xib; sourceTree = "<group>"; };
+		9E450CF01FDD13A400B3A39A /* TitleOurMuseumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleOurMuseumTableViewCell.swift; sourceTree = "<group>"; };
+		9E450CF11FDD13A400B3A39A /* TitleOurMuseumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleOurMuseumTableViewCell.xib; sourceTree = "<group>"; };
 		9E4A95D61FDBCFED00FBE53C /* SciMuseumCU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciMuseumCU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4A95D91FDBCFED00FBE53C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E4A95E31FDBCFED00FBE53C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -242,6 +252,34 @@
 			path = xib;
 			sourceTree = "<group>";
 		};
+		9E450CEC1FDD133400B3A39A /* Special */ = {
+			isa = PBXGroup;
+			children = (
+				9E418AD31FDCE9FA0083A41A /* SpecialExhibitionViewController.swift */,
+			);
+			path = Special;
+			sourceTree = "<group>";
+		};
+		9E450CEE1FDD136600B3A39A /* Museum Map */ = {
+			isa = PBXGroup;
+			children = (
+				9E418AD51FDCF1800083A41A /* MuseumMapViewController.swift */,
+			);
+			path = "Museum Map";
+			sourceTree = "<group>";
+		};
+		9E450CEF1FDD137900B3A39A /* Our Museum */ = {
+			isa = PBXGroup;
+			children = (
+				9E450CE41FDD074400B3A39A /* OurMuseumTableViewController.swift */,
+				9E450CE81FDD0C9C00B3A39A /* OurMuseumTableViewCell.swift */,
+				9E450CF01FDD13A400B3A39A /* TitleOurMuseumTableViewCell.swift */,
+				9E450CF11FDD13A400B3A39A /* TitleOurMuseumTableViewCell.xib */,
+				9E450CE91FDD0C9C00B3A39A /* OurMuseumTableViewCell.xib */,
+			);
+			path = "Our Museum";
+			sourceTree = "<group>";
+		};
 		9E4A95CD1FDBCFED00FBE53C = {
 			isa = PBXGroup;
 			children = (
@@ -268,9 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				9E4A95D91FDBCFED00FBE53C /* AppDelegate.swift */,
-				9E418AD31FDCE9FA0083A41A /* SpecialExhibitionViewController.swift */,
 				9E5ED7B61FDBD86300332373 /* Main.storyboard */,
-				9E418AD51FDCF1800083A41A /* MuseumMapViewController.swift */,
 				9E4A95E31FDBCFED00FBE53C /* Assets.xcassets */,
 				9E4A961A1FDBD2E800FBE53C /* Controller */,
 				9E4A960B1FDBD1C700FBE53C /* Model */,
@@ -326,6 +362,9 @@
 		9E4A961B1FDBD2F300FBE53C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9E450CEF1FDD137900B3A39A /* Our Museum */,
+				9E450CEE1FDD136600B3A39A /* Museum Map */,
+				9E450CEC1FDD133400B3A39A /* Special */,
 				9E4A961F1FDBD30A00FBE53C /* FirstViewController.swift */,
 				9E4A961C1FDBD30A00FBE53C /* CarouselViewCell.swift */,
 				9E4A961E1FDBD30A00FBE53C /* WebViewController.swift */,
@@ -483,6 +522,8 @@
 			files = (
 				9E4A97161FDBD78D00FBE53C /* TitleTableViewCell.xib in Resources */,
 				9E4A971B1FDBD78D00FBE53C /* InformationTableViewCell.xib in Resources */,
+				9E450CEB1FDD0C9C00B3A39A /* OurMuseumTableViewCell.xib in Resources */,
+				9E450CF31FDD13A400B3A39A /* TitleOurMuseumTableViewCell.xib in Resources */,
 				9E19EE4A1FDBDAF6000C1AE4 /* TrailTitleViewCell.xib in Resources */,
 				9E4A960F1FDBD1D900FBE53C /* Query.graphql in Resources */,
 				9E4A96141FDBD22500FBE53C /* schema.json in Resources */,
@@ -700,10 +741,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E4A97061FDBD73600FBE53C /* LinearProgressView.swift in Sources */,
+				9E450CF21FDD13A400B3A39A /* TitleOurMuseumTableViewCell.swift in Sources */,
 				9E19EE401FDBDADF000C1AE4 /* TrailQRCodeViewController.swift in Sources */,
 				9E4A96F31FDBD72100FBE53C /* CollectionViewController.swift in Sources */,
 				9E19EE4D1FDBDAF6000C1AE4 /* TrailStampCell.swift in Sources */,
 				9E4A95DA1FDBCFED00FBE53C /* AppDelegate.swift in Sources */,
+				9E450CEA1FDD0C9C00B3A39A /* OurMuseumTableViewCell.swift in Sources */,
 				9E4A970A1FDBD73600FBE53C /* StampCollectionViewCell.swift in Sources */,
 				9E4A96F51FDBD72100FBE53C /* CollectionQRCodeController.swift in Sources */,
 				9E4A970E1FDBD75400FBE53C /* QRCodeViewController.swift in Sources */,
@@ -713,6 +756,7 @@
 				9E4A97191FDBD78D00FBE53C /* SDWebImage.m in Sources */,
 				9E4A97171FDBD78D00FBE53C /* InformationTableViewCell.swift in Sources */,
 				9E4A97031FDBD73600FBE53C /* CollectionTableCell.swift in Sources */,
+				9E450CE51FDD074400B3A39A /* OurMuseumTableViewController.swift in Sources */,
 				9E4A96F41FDBD72100FBE53C /* StampViewController.swift in Sources */,
 				9E19EE4C1FDBDAF6000C1AE4 /* TrailTableViewCell.swift in Sources */,
 				9E4A96231FDBD30A00FBE53C /* FirstViewController.swift in Sources */,
