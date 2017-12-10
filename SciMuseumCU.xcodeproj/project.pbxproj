@@ -21,8 +21,9 @@
 		9E19EE4D1FDBDAF6000C1AE4 /* TrailStampCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19EE471FDBDAF5000C1AE4 /* TrailStampCell.swift */; };
 		9E19EE4E1FDBDAF6000C1AE4 /* TrailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E19EE481FDBDAF6000C1AE4 /* TrailTableViewCell.xib */; };
 		9E19EE4F1FDBDAF6000C1AE4 /* TrailTitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19EE491FDBDAF6000C1AE4 /* TrailTitleViewCell.swift */; };
+		9E418AD41FDCE9FA0083A41A /* SpecialExhibitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E418AD31FDCE9FA0083A41A /* SpecialExhibitionViewController.swift */; };
+		9E418AD61FDCF1800083A41A /* MuseumMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E418AD51FDCF1800083A41A /* MuseumMapViewController.swift */; };
 		9E4A95DA1FDBCFED00FBE53C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A95D91FDBCFED00FBE53C /* AppDelegate.swift */; };
-		9E4A95DC1FDBCFED00FBE53C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A95DB1FDBCFED00FBE53C /* ViewController.swift */; };
 		9E4A95E41FDBCFED00FBE53C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E4A95E31FDBCFED00FBE53C /* Assets.xcassets */; };
 		9E4A95E71FDBCFED00FBE53C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4A95E51FDBCFED00FBE53C /* LaunchScreen.storyboard */; };
 		9E4A95F21FDBCFED00FBE53C /* SciMuseumCUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A95F11FDBCFED00FBE53C /* SciMuseumCUTests.swift */; };
@@ -94,9 +95,10 @@
 		9E19EE471FDBDAF5000C1AE4 /* TrailStampCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailStampCell.swift; sourceTree = "<group>"; };
 		9E19EE481FDBDAF6000C1AE4 /* TrailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrailTableViewCell.xib; sourceTree = "<group>"; };
 		9E19EE491FDBDAF6000C1AE4 /* TrailTitleViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailTitleViewCell.swift; sourceTree = "<group>"; };
+		9E418AD31FDCE9FA0083A41A /* SpecialExhibitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialExhibitionViewController.swift; sourceTree = "<group>"; };
+		9E418AD51FDCF1800083A41A /* MuseumMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumMapViewController.swift; sourceTree = "<group>"; };
 		9E4A95D61FDBCFED00FBE53C /* SciMuseumCU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciMuseumCU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4A95D91FDBCFED00FBE53C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E4A95DB1FDBCFED00FBE53C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E4A95E31FDBCFED00FBE53C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E4A95E61FDBCFED00FBE53C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E4A95E81FDBCFED00FBE53C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -220,6 +222,26 @@
 			path = xib;
 			sourceTree = "<group>";
 		};
+		9E418AD11FDCE9190083A41A /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				9E4A97111FDBD78C00FBE53C /* InformationTableViewCell.swift */,
+				9E4A97121FDBD78D00FBE53C /* InformationViewController.swift */,
+				9E4A97141FDBD78D00FBE53C /* TitleTableViewCell.swift */,
+				9E418AD21FDCE9380083A41A /* xib */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		9E418AD21FDCE9380083A41A /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				9E4A97151FDBD78D00FBE53C /* InformationTableViewCell.xib */,
+				9E4A97101FDBD78C00FBE53C /* TitleTableViewCell.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
 		9E4A95CD1FDBCFED00FBE53C = {
 			isa = PBXGroup;
 			children = (
@@ -245,16 +267,10 @@
 		9E4A95D81FDBCFED00FBE53C /* SciMuseumCU */ = {
 			isa = PBXGroup;
 			children = (
-				9E4A970D1FDBD75400FBE53C /* QRCodeViewController.swift */,
-				9E4A97111FDBD78C00FBE53C /* InformationTableViewCell.swift */,
-				9E4A97151FDBD78D00FBE53C /* InformationTableViewCell.xib */,
-				9E4A97121FDBD78D00FBE53C /* InformationViewController.swift */,
-				9E4A97131FDBD78D00FBE53C /* SDWebImage.m */,
-				9E4A97141FDBD78D00FBE53C /* TitleTableViewCell.swift */,
-				9E4A97101FDBD78C00FBE53C /* TitleTableViewCell.xib */,
 				9E4A95D91FDBCFED00FBE53C /* AppDelegate.swift */,
+				9E418AD31FDCE9FA0083A41A /* SpecialExhibitionViewController.swift */,
 				9E5ED7B61FDBD86300332373 /* Main.storyboard */,
-				9E4A95DB1FDBCFED00FBE53C /* ViewController.swift */,
+				9E418AD51FDCF1800083A41A /* MuseumMapViewController.swift */,
 				9E4A95E31FDBCFED00FBE53C /* Assets.xcassets */,
 				9E4A961A1FDBD2E800FBE53C /* Controller */,
 				9E4A960B1FDBD1C700FBE53C /* Model */,
@@ -296,7 +312,10 @@
 		9E4A961A1FDBD2E800FBE53C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9E4A970D1FDBD75400FBE53C /* QRCodeViewController.swift */,
+				9E4A97131FDBD78D00FBE53C /* SDWebImage.m */,
 				9E19EE361FDBDAC7000C1AE4 /* SearchViewController.swift */,
+				9E418AD11FDCE9190083A41A /* Information */,
 				9E19EE381FDBDACD000C1AE4 /* Trail */,
 				9E4A96EF1FDBD71400FBE53C /* Collection */,
 				9E4A961B1FDBD2F300FBE53C /* Home */,
@@ -683,7 +702,6 @@
 				9E4A97061FDBD73600FBE53C /* LinearProgressView.swift in Sources */,
 				9E19EE401FDBDADF000C1AE4 /* TrailQRCodeViewController.swift in Sources */,
 				9E4A96F31FDBD72100FBE53C /* CollectionViewController.swift in Sources */,
-				9E4A95DC1FDBCFED00FBE53C /* ViewController.swift in Sources */,
 				9E19EE4D1FDBDAF6000C1AE4 /* TrailStampCell.swift in Sources */,
 				9E4A95DA1FDBCFED00FBE53C /* AppDelegate.swift in Sources */,
 				9E4A970A1FDBD73600FBE53C /* StampCollectionViewCell.swift in Sources */,
@@ -703,6 +721,7 @@
 				9E4A971A1FDBD78D00FBE53C /* TitleTableViewCell.swift in Sources */,
 				9E19EE421FDBDADF000C1AE4 /* IntroductionViewController.swift in Sources */,
 				9E4A970B1FDBD73600FBE53C /* CollectionCell.swift in Sources */,
+				9E418AD61FDCF1800083A41A /* MuseumMapViewController.swift in Sources */,
 				9E4A96221FDBD30A00FBE53C /* WebViewController.swift in Sources */,
 				9E4A97041FDBD73600FBE53C /* TotalTableViewCell.swift in Sources */,
 				9E19EE4F1FDBDAF6000C1AE4 /* TrailTitleViewCell.swift in Sources */,
@@ -710,6 +729,7 @@
 				9E4A96111FDBD1D900FBE53C /* Data.swift in Sources */,
 				9E4A96161FDBD24A00FBE53C /* API.swift in Sources */,
 				9E4A97181FDBD78D00FBE53C /* InformationViewController.swift in Sources */,
+				9E418AD41FDCE9FA0083A41A /* SpecialExhibitionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

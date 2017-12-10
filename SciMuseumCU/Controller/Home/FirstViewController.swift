@@ -96,9 +96,14 @@ class FirstViewController: UIViewController,WKUIDelegate,UIGestureRecognizerDele
                 if (self.tableView.cellForRow(at: tapIndexPath) as? CarouselViewCell) != nil {
                     //do what you want to cell here
                     
-                    if tapIndexPath.row == 1{
-                        UIApplication.shared.openURL(URL(string:"https://www.google.com/maps/@42.585444,13.007813,6z")!)
-
+                    switch tapIndexPath.row{
+                    case 0: break
+                    case 1: let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "MuseumMapViewController") as! MuseumMapViewController
+                    
+                    navigationController?.pushViewController(newViewController, animated: true)
+                    default:
+                        break
                     }
                    
                     

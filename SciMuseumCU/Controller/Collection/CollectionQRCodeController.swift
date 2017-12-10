@@ -17,13 +17,6 @@ class CollectionQRCodeController: QRCodeViewController   {
     
     override func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
-        // Check if the metadataObjects array is not nil and it contains at least one object.
-        if metadataObjects == nil || metadataObjects.count == 0 {
-            qrCodeFrameView?.frame = CGRect.zero
-            // messageLabel.text = "No QR/barcode is detected"
-            return
-        }
-        
         // Get the metadata object.
         let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
@@ -42,7 +35,7 @@ class CollectionQRCodeController: QRCodeViewController   {
                 
                 if  input == check{
                     let stampData = try! Realm().objects(Collection.self).filter("id = %@" ,collection)
-                    let itemName = stampData.filter("id = %@",item)
+                    //let itemName = stampData.filter("id = %@",item)
                     for i in stampData{
                         for j in i.item{
                             if j.id == item {
