@@ -102,6 +102,7 @@ extension TrailTableViewController: UITableViewDelegate,UITableViewDataSource{
         let data = try! Realm().objects(Quest.self).filter("name = %@",quest[indexPath.row])
         for i in data{
             for j in i.objective{
+                newViewController.header.append(j.name)
                 var temp = [Target]()
                 for k in j.target{
                     

@@ -1,59 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Light</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrailStampCell" id="Yfg-qw-UfW" customClass="TrailStampCell" customModule="Bio_Museum" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrailStampCell" id="Yfg-qw-UfW" customClass="TrailStampCell" customModule="SciMuseumCU" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="137" height="213"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="137" height="213"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HaI-VU-Lnm">
-                        <rect key="frame" x="4" y="4" width="169" height="193.5"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zOl-zT-YPG">
-                                <rect key="frame" x="0.0" y="0.0" width="137" height="137"/>
-                                <color key="backgroundColor" red="0.98823529409999999" green="0.8980392157" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="zOl-zT-YPG" secondAttribute="height" multiplier="1:1" id="XB8-KI-0wv"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6E7-EA-l6g">
-                                <rect key="frame" x="0.0" y="137" width="137" height="76"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </stackView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zOl-zT-YPG">
+                        <rect key="frame" x="0.0" y="0.0" width="137" height="213"/>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.8980392157" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="HaI-VU-Lnm" firstAttribute="leading" secondItem="Yfg-qw-UfW" secondAttribute="leading" id="BMw-My-Rc0"/>
-                <constraint firstItem="HaI-VU-Lnm" firstAttribute="top" secondItem="Yfg-qw-UfW" secondAttribute="top" id="JMa-ep-DOS"/>
-                <constraint firstAttribute="trailing" secondItem="HaI-VU-Lnm" secondAttribute="trailing" id="S7P-W7-kD5"/>
-                <constraint firstAttribute="bottom" secondItem="HaI-VU-Lnm" secondAttribute="bottom" id="ph7-Ix-xWX"/>
+                <constraint firstItem="zOl-zT-YPG" firstAttribute="top" secondItem="Yfg-qw-UfW" secondAttribute="top" id="ZFq-KF-4i5"/>
+                <constraint firstAttribute="trailing" secondItem="zOl-zT-YPG" secondAttribute="trailing" id="aOX-WE-mdz"/>
+                <constraint firstAttribute="bottom" secondItem="zOl-zT-YPG" secondAttribute="bottom" id="b9V-UY-bZh"/>
+                <constraint firstItem="zOl-zT-YPG" firstAttribute="leading" secondItem="Yfg-qw-UfW" secondAttribute="leading" id="meu-KK-cLe"/>
             </constraints>
             <size key="customSize" width="137" height="213"/>
             <connections>
                 <outlet property="img" destination="zOl-zT-YPG" id="l1z-xE-QeV"/>
-                <outlet property="label" destination="6E7-EA-l6g" id="lUo-rN-QI7"/>
             </connections>
             <point key="canvasLocation" x="179.5" y="84.5"/>
         </collectionViewCell>

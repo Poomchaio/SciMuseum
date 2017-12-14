@@ -309,7 +309,6 @@
 			children = (
 				9E4A95D91FDBCFED00FBE53C /* AppDelegate.swift */,
 				9E5ED7B61FDBD86300332373 /* Main.storyboard */,
-				9E14AEC41FDD5D64006A3DA4 /* GeneralInfoViewController.swift */,
 				9E4A95E31FDBCFED00FBE53C /* Assets.xcassets */,
 				9E4A961A1FDBD2E800FBE53C /* Controller */,
 				9E4A960B1FDBD1C700FBE53C /* Model */,
@@ -365,6 +364,7 @@
 		9E4A961B1FDBD2F300FBE53C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9E14AEC41FDD5D64006A3DA4 /* GeneralInfoViewController.swift */,
 				9E450CEF1FDD137900B3A39A /* Our Museum */,
 				9E450CEE1FDD136600B3A39A /* Museum Map */,
 				9E450CEC1FDD133400B3A39A /* Special */,

@@ -18,6 +18,7 @@ class TrailStampViewController: UIViewController, UICollectionViewDelegate, UICo
     var questName = ""
     let headerIdentifier = "HeaderCollectionViewCell"
     var questIntroduction = ""
+    var header = [String]()
     var target = [[Target]]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,7 +111,7 @@ class TrailStampViewController: UIViewController, UICollectionViewDelegate, UICo
             return CGSize.zero
             
         }
-        return CGSize(width: collectionView.bounds.width, height: 20)
+        return CGSize(width: collectionView.bounds.width, height: 30)
         
     }
     
@@ -120,8 +121,9 @@ class TrailStampViewController: UIViewController, UICollectionViewDelegate, UICo
         let reusableView: UICollectionReusableView = UICollectionReusableView()
         
         if kind == UICollectionElementKindSectionHeader{
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier, for: indexPath)
-            return headerView;
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier, for: indexPath) as? HeaderCollectionViewCell
+            headerView?.label.text = header[indexPath.section-1]
+            return headerView!
         }
         return reusableView
     }

@@ -18,16 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="csv-0L-q4J">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenimg" translatesAutoresizingMaskIntoConstraints="NO" id="csv-0L-q4J">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="csv-0L-q4J" secondAttribute="trailing" id="P28-9U-w9T"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="csv-0L-q4J" secondAttribute="bottom" id="ZlS-KE-TjR"/>
-                            <constraint firstItem="csv-0L-q4J" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="dQL-h0-i8N"/>
-                            <constraint firstItem="csv-0L-q4J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lne-ZV-LHQ"/>
+                            <constraint firstItem="csv-0L-q4J" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cPh-w8-RRy"/>
+                            <constraint firstItem="csv-0L-q4J" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fBQ-H9-J0Y"/>
+                            <constraint firstItem="csv-0L-q4J" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="jIc-E8-blw"/>
+                            <constraint firstItem="csv-0L-q4J" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="m8U-QU-N9a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchScreen" width="1080" height="1920"/>
+        <image name="launchScreenimg" width="1080" height="1920"/>
     </resources>
 </document>
